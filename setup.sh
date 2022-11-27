@@ -13,13 +13,6 @@ apt-get install sudo -y
 #sudo install -d -m755 -o $(id -u) -g $(id -g) /nix
 #curl -L https://nixos.org/nix/install | sh
 
-# If pyproject.toml exists, install it with poetry
-if [ -f "pyproject.toml" ]; then
-    echo "Installing poetry deps..."
-    # Install all dependencies
-    poetry install
-fi
-
 # Copy dotfiles
 #mkdir -p $HOME/.config/nix
 #cp nix.conf $HOME/.config/nix/nix.conf

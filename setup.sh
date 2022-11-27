@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Install sudo
-apt-get update
-apt-get install sudo -y
-
 # Install direnv
 #echo "Installing direnv..."
 #curl -sfL https://direnv.net/install.sh | bash

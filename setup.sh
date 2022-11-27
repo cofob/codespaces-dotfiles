@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Copy dotfiles
-rm $HOME/.bashrc
-cp .bashrc $HOME/
-
 # Install sudo
 apt-get update
 apt-get install sudo -y
@@ -22,3 +18,9 @@ if [ -f "pyproject.toml" ]; then
     # Install all dependencies
     poetry install
 fi
+
+# Copy dotfiles
+rm $HOME/.bashrc
+cp .bashrc $HOME/
+mkdir -p $HOME/.config/nix
+cp nix.conf $HOME/.config/nix/nix.conf

@@ -147,3 +147,8 @@ source $HOME/.nix-profile/etc/profile.d/nix.sh
 if [ -f "setup.sh" ]; then
     . setup.sh
 fi
+
+# If .envrc exists, allow it
+if [ -f ".envrc" ]; then
+    direnv allow
+fi

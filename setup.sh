@@ -20,7 +20,7 @@ if [ -f "pyproject.toml" ]; then
 fi
 
 # Copy dotfiles
-rm $HOME/.bashrc
-cp .bashrc $HOME/
 mkdir -p $HOME/.config/nix
 cp nix.conf $HOME/.config/nix/nix.conf
+rm $HOME/.bashrc
+cp .bashrc $HOME/

@@ -9,8 +9,9 @@ echo "Installing direnv..."
 curl -sfL https://direnv.net/install.sh | bash
 
 # Install nix
-sudo install -d -m755 -o $(id -u) -g $(id -g) /nix
-curl -L https://nixos.org/nix/install | sh
+#echo "Installing nix..."
+#sudo install -d -m755 -o $(id -u) -g $(id -g) /nix
+#curl -L https://nixos.org/nix/install | sh
 
 # If pyproject.toml exists, install it with poetry
 if [ -f "pyproject.toml" ]; then

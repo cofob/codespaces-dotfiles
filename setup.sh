@@ -5,8 +5,8 @@ apt-get update
 apt-get install sudo -y
 
 # Install direnv
-echo "Installing direnv..."
-curl -sfL https://direnv.net/install.sh | bash
+#echo "Installing direnv..."
+#curl -sfL https://direnv.net/install.sh | bash
 
 # Install nix
 #echo "Installing nix..."
@@ -21,7 +21,7 @@ if [ -f "pyproject.toml" ]; then
 fi
 
 # Copy dotfiles
-mkdir -p $HOME/.config/nix
-cp nix.conf $HOME/.config/nix/nix.conf
+#mkdir -p $HOME/.config/nix
+#cp nix.conf $HOME/.config/nix/nix.conf
 rm $HOME/.bashrc
 cp .bashrc $HOME/

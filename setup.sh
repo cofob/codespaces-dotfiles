@@ -14,3 +14,10 @@
 #cp nix.conf $HOME/.config/nix/nix.conf
 rm $HOME/.bashrc
 cp .bashrc $HOME/
+
+# Install poetry
+curl https://install.python-poetry.org/ | bash
+
+# Install pyenv
+curl https://pyenv.run | bash
+eval "$(pyenv init -)"

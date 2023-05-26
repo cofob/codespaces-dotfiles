@@ -20,4 +20,7 @@ curl https://install.python-poetry.org/ | bash
 
 # Install pyenv
 curl https://pyenv.run | bash
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+

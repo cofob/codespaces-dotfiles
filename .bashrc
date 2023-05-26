@@ -143,6 +143,8 @@ export PROMPT_DIRTRIM=4
 #eval "$(direnv hook bash)"
 #source $HOME/.nix-profile/etc/profile.d/nix.sh
 
+export PATH=$PATH:$HOME/.local/bin
+
 # If setup.sh exists, execute it
 if [ -f "setup.sh" ]; then
     . setup.sh

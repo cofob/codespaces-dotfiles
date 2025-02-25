@@ -140,8 +140,9 @@ __bash_prompt() {
 __bash_prompt
 export PROMPT_DIRTRIM=4
 
-#eval "$(direnv hook bash)"
-#source $HOME/.nix-profile/etc/profile.d/nix.sh
+if command -v direnv >/dev/null 2>&1; then
+  eval "$(direnv hook bash)"
+fi
 
 export PATH=$PATH:$HOME/.local/bin
 
@@ -149,8 +150,3 @@ export PATH=$PATH:$HOME/.local/bin
 if [ -f "setup.sh" ]; then
     . setup.sh
 fi
-
-# If .envrc exists, allow it
-#if [ -f ".envrc" ]; then
-#    direnv allow
-#fi
